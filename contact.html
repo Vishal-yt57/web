@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Vishal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Vishal Goyal</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="vishal.pdf" download>Resume</a>
+</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form" action="https://formspree.io/f/mzzvybpd" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="_replyto" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+<p id="form-status" style="margin-top:10px; color:green; display:none;">
+  ✅ Message sent successfully!
+</p>
+
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vishal Goyal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
