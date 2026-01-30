@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SGPA Calculator</title>
+</head>
+<body>
+
+<h2>SGPA Calculator</h2>
+
+<p>Enter percentage marks:</p>
+
+Maths (4): <input id="m"><br><br>
+OOP (4): <input id="o"><br><br>
+DS (6): <input id="d"><br><br>
+CA (4): <input id="c"><br><br>
+DE (4): <input id="e"><br><br>
+STRW (1): <input id="s"><br><br>
+
+<button onclick="calc()">Calculate SGPA</button>
+
+<h3 id="out"></h3>
+
+<script>
+function gp(p){
+  if(p>=90) return 10;
+  if(p>=80) return 9;
+  if(p>=70) return 8;
+  if(p>=60) return 7;
+  if(p>=50) return 6;
+  if(p>=45) return 5;
+  if(p>=40) return 4;
+  return 0;
+}
+
+function calc(){
+  let credits = [4,4,6,4,4,1];
+  let marks = [
+    m.value, o.value, d.value, c.value, e.value, s.value
+  ];
+
+  let totalC = 0, total = 0;
+
+  for(let i=0;i<credits.length;i++){
+    totalC += credits[i];
+    total += credits[i] * gp(marks[i]);
+  }
+
+  document.getElementById("out").innerHTML =
+    "Your SGPA is: " + (total/totalC).toFixed(2);
+}
+</script>
+
+</body>
+</html>
